@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag lesson11-test1:build_${{ github.run_number }}
+      run: docker build . --file Dockerfile --tag ghcr.io/norbertliska/lesson11-test1:build_${{ github.run_number }}
     - name: Push the Docker image
-      run: docker push lesson11-test1:build_${{ github.run_number }}
+      run: docker push ghcr.io/norbertliska/lesson11-test1:build_${{ github.run_number }}
