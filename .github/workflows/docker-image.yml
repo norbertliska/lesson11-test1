@@ -8,9 +8,6 @@ jobs:
   build:
     permissions: write-all
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./lesson11-test1
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -18,8 +15,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
-          cache-dependency-path: ./lesson11-test1/package-lock.json
       - name: Install dependencies
         run: npm install
       - name: Login to GitHub Container Registry
